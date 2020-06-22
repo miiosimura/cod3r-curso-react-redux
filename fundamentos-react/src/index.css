@@ -1,8 +1,9 @@
 body {
-  background-color: #222222;
+  background-color: #36151E;
   color: #ffffff;
   font-family: Roboto Mono;
   text-align: center;
+  font-size: 1rem;
 }
 
 h1, h2, h3{
