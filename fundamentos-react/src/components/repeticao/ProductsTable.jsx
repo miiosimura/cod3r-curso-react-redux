@@ -1,19 +1,23 @@
 import React from 'react'
 import products from '../../data/products'
+import './ProductsTable.css'
 
 export default props => {
-  const productList = products.map(product => {
-    return (
-        <tr key={product.id}>
-          <th>{product.id}</th>
-          <th>{product.name}</th>
-          <th>R$ {product.price.toFixed(2)}</th>
-        </tr>
-    )
-  })
+
+  function productList() {
+    return products.map((product, index) => {
+      return (
+          <tr key={product.id} className={index % 2 === 0 ? 'Even' : 'Odd'}>
+            <td>{product.id}</td>
+            <td>{product.name}</td>
+            <td>R$ {product.price.toFixed(2)}</td>
+          </tr>
+      )
+    })
+  }
 
   return (
-    <div>
+    <div className="ProductsTable">
       <h3>Tabela de Produtos</h3>
       <table>
         <tr>
@@ -22,7 +26,7 @@ export default props => {
           <th>Preço</th>
         </tr>
 
-        {productList}
+        {productList()}
       </table>
     </div>
   )

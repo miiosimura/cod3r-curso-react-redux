@@ -1,0 +1,15 @@
+.ProductsTable table {
+  width: 100%;
+}
+
+.ProductsTable th {
+  background-color: steelblue;
+}
+
+.ProductsTable .Even {
+  background-color: lightblue;
+}
+
+.ProductsTable .Odd {
+  background-color: antiquewhite;
+}

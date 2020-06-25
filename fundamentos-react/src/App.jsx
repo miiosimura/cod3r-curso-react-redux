@@ -1,13 +1,17 @@
 import React from 'react'
+import './App.css'
+
+import Card from './components/layout/Card'
+
 import First from './components/basics/First'
 import WithParameter from './components/basics/WithParameter'
 import Random from './components/basics/Random'
-import Card from './components/layout/Card'
 import Family from './components/basics/Family'
 import FamilyMember from './components/basics/FamilyMember'
 import StudentsList from './components/repeticao/StudentsList'
 import ProductsTable from './components/repeticao/ProductsTable'
-import './App.css'
+import EvenOrOdd from './components/conditional/EvenOrOdd'
+import UserInfo from './components/conditional/UserInfo'
 
 //export default function App(props){   -> forma completa
 export default _ => {
@@ -16,6 +20,12 @@ export default _ => {
       <h1>Fundamentos de React</h1>
 
       <div className="Cards">
+        <Card title='#7 - Renderização condicional'>
+          <EvenOrOdd number={21}></EvenOrOdd>
+          <UserInfo user={{name: 'Maria'}} />
+          <UserInfo />
+        </Card>
+
         <Card title='#6 - Repetição Desafio' color="#8499B1">
           <ProductsTable/>
         </Card>
